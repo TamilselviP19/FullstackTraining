@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assessment1</title>
+    <style>
+        .header{
+            width: 100vw;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        nav{
+            background-color: antiquewhite;
+            color: black;
+            width: 100vw;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul{
+            
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+            gap: 20px;
+            margin-top:5px;
+        }
+        nav li{
+            list-style: none;
+        }
+        nav li:hover{
+            background-color: aqua;
+        }
+
+        nav a{
+            text-decoration: none;
+        }
+        .login{
+            gap: 5px;
+            display: flex;
+        }
+         table,th,tr,td {
+            border:2px solid black;
+            border-collapse: collapse;
+            background-color: rgb(236, 233, 240);
+            border-spacing: 20px;
+
+        }
+       
+        
+           #a::before{
+            content: "A.";
+           }
+           #b::before{
+            content: "B.";
+           }
+           #c::before{
+            content: "C.";
+           }
+           .stickysec{
+            width: 100px;
+            height: 100px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+           }
+            .box {
+            width: 150px;
+            height: 150px;
+            background-color:green;
+            margin: 50px auto;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .box:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+           .circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            animation-name:roundtrans;
+            animation-duration: 0.8;
+            background-color: aqua;
+           }
+           @keyframes roundtrans{
+            0% {
+                background-color: red;
+           }
+           33%{
+            background-color: yellow;
+           }
+           66%{
+            background-color: blue;
+           }
+           100%{
+            background-color: green;
+           }
+        }
+        .container1{
+            width: 700px;
+            height: 500px;
+            background-color: antiquewhite;
+           
+        }
+        .container{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 200px;
+            height: 300px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .card button{
+            background-color: red;
+        }
+        .login1{
+            width: 400px;
+            height: 250px;
+            background-color: antiquewhite;
+            display: block;
+        }
+        .loginform{
+
+            align-items: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Output1</h1>
+    <header class="header">
+        <h1>Amazon</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="www.google.com">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#product">products</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <div class="login">
+                 <li><img src= "C:\Users\parth\OneDrive\Desktop\WebpageTask\html\img3.png" alt="image" width="20" height="20"></li>
+                <li><a href="#login">Login</a></li>
+            </div>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Output 13</h1>
+    <div class="stickysec">
+        <select >
+            <option value="Home">Home</option>
+            <option value="about">About</option>
+            <option value="Contact">Contact</option>
+            <option value="Login">Login</option>
+        </select>
+    </div>
+    <h1>output2</h1>
+    <br>
+    <p><b>FITA is an Online and Offline transformative upskilling platform for working tech and business professionals.</b></p>
+    <p>FITA is an Online and Offline transformative <i>upskilling platform </i>for working tech and business professionals.</p>
+    <p>FITA is an Online and Offline transformative upskilling platform for working tech and business professionals.<sup>*</sup></p>
+    <hr>
+    <h1>output3</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Date</th>
+            <th>Number of pages</th>
+        </tr>
+        <tr>
+            <td>html</td>
+            <td>james</td>
+             <td>2024</td>
+              <td>200</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Ajay</td>
+            <td>2025</td>
+            <td>234</td>
+        </tr>
+        <tr>
+            <td>Java script</td>
+            <td>suriya</td>
+            <td>2026</td>
+            <td>235</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>suriya</td>
+            <td>2027</td>
+            <td>290</td>
+        </tr>
+        <tr>
+            <td>java</td>
+            <td>vijay</td>
+            <td>2000</td>
+            <td>300</td>
+        </tr>
+        
+    </table>
+    <hr>
+    <h1>Output4</h1>
+    <form>
+        
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <label for="age">Age</label>
+        <input type="text" id="age"><br><br>
+        <label>Gender</label>
+        <input type="radio" id="female" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="Male" value="Male">
+        <label for="Male">Male</label>
+        <br><br>
+        <label for="Favorite Food">Favorite Food</label>
+        <select id="Favorite Food">
+            <option value="pizza">Pizza</option>
+             <option value="Chinese">Chinese</option>
+              <option value="Indian">Indian</option>
+               <option value="northIndian">NorthIndian</option>
+        </select>
+        <br><br>
+        <label for="cooklike">Do you like to cook</label>
+        <input type="checkbox" id="cook" value="Yes">
+        <label for="cook">Yes</label>
+        
+        <input type="checkbox" id="cook" value="No">
+        <label for="cook">No</label>
+        <br>
+        <br>
+        <label for="textarea">Additional comments</label>
+        <textarea>
+        </textarea>
+        <br>
+        <br>
+        <button>Submit</button>
+        
+    </form>
+    <hr>
+    <h1>Output5</h1>
+    <h3>Unorder list</h3>
+    <ol style="list-style: none;">
+        <li id="a">Chennai</li>
+        <li id="b">Madurai</li>
+        <li id="c">Thiruchi</li>
+       
+    </ol>
+    <h3>Order list</h3>
+    <ul style="list-style:square;" >
+        <li >Chennai</li>
+        <li >Madurai</li>
+        <li >Thiruchi</li>
+       
+    </ul>
+    <hr>
+    <br>
+    <h1>output 8</h1>
+    <div class="box">
+         Hover me</div>
+    
+
+    <hr>
+    <br>
+    <h1>Output 9</h1>
+    <div class="circle">
+    </div>
+    <hr>
+    <h1>Output10</h1>
+    <h1>Audio</h1>
+    
+        <audio src="C:\Users\parth\OneDrive\Documents\aduio-1-20577.mp3" type="audio/mp3" controls></audio>
+
+    
+    <h1>Video </h1>
+    <video src="C:\Users\parth\OneDrive\Documents\218714_tiny.mp4" controls autoplay  poster="./image4.png" style="border-style: solid; width:500px;"></video>
+    </div>
+
+    <hr>
+    <h1>Output11</h1>
+    <div class="container1">
+        <h1 style=" display:flex; justify-content: center; text-decoration: underline red;">Start healthy eating today </h1>
+
+        <div class="container">
+            
+            <div class="card one">
+                <p>Premium</p>
+                <h3>$399/month</h3>
+                <p>Thats only 13.30$ per meal</p>
+                <hr>
+                <p>1 meal every day</p>
+                <p>Order 24/7</p>
+                <p>Access to newest creation</p>
+                <p>Free delivery</p>
+                <hr>
+                <button><p>I'm hungry</p></button>
+            </div>
+             <div class="card two">
+                <p>Premium</p>
+                <h3>$399/month</h3>
+                <p>Thats only 13.30$ per meal</p>
+                <hr>
+                <p>1 meal every day</p>
+                <p>Order 24/7</p>
+                <p>Access to newest creation</p>
+                <p>Free delivery</p>
+                <hr>
+                <button><p>I'm hungry</p></button>
+            </div>
+             <div class="card three">
+                <p>Premium</p>
+                <h3>$399/month</h3>
+                <p>Thats only 13.30$ per meal</p>
+                <hr>
+                <p>1 meal every day</p>
+                <p>Order 24/7</p>
+                <p>Access to newest creation</p>
+                <p>Free delivery</p>
+                <hr>
+                <button><p>I'm hungry</p></button>
+            </div>
+        </div>
+    </div>
+   
+   <hr>
+   <h1>Output2</h1>
+   <div class="login1">
+    <div>
+
+        <h3>Login</h3>
+    </div>
+    <div class="loginform>">
+
+        <form>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required minlength="20"><br><br>
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" required minlength="8"><br><br>
+            <label for="check">Remember me</label>
+            <input type="checkbox" id="check" name="check"><br><br>
+            <button>Submit</button>
+    
+        </form>
+    </div>
+   </div>
+
+</body>
+
+</html>
