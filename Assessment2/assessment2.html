@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>2.Most Repeated Character in a String</h3>
+    <p>Most repeated character: <span id="result"></span></p>
+    <h3>3.Find Longest Word in a Sentence</h3>
+    <input
+      type="text"
+      id="sentenceInput"
+      placeholder="Enter a sentence"
+      style="width: 300px"
+    />
+    <button onclick="handleFindLongestWord()">Find Longest Word</button>
+    <p id="longestWordResult"></p>
+    <script>
+      //unique elements in arr
+      console.log("1.unique elements in array");
+      function findUniqueElements(arr1, arr2) {
+        const set1 = new Set(arr1);
+        const set2 = new Set(arr2);
+
+        const uniqueInArr1 = arr1.filter((x) => !set2.has(x));
+        const uniqueInArr2 = arr2.filter((x) => !set1.has(x));
+
+        return uniqueInArr1.concat(uniqueInArr2);
+      }
+      const array1 = [1, 2, 3];
+      const array2 = [2, 4, 5];
+      const uniqueElements = findUniqueElements(array1, array2);
+      console.log(uniqueElements);
+
+      //most repeated charcter in a string
+      function findMostRepeatedChar(word) {
+        const charCount = {};
+        for (const char of word) {
+          charCount[char] = (charCount[char] || 0) + 1;
+        }
+
+        let maxChar = "";
+        let maxCount = 0;
+        for (const char in charCount) {
+          if (charCount[char] > maxCount) {
+            maxChar = char;
+            maxCount = charCount[char];
+          }
+        }
+        return maxChar;
+      }
+
+      const word = "aabbbcccc";
+      document.getElementById("result").textContent =
+        findMostRepeatedChar(word);
+
+      //Longest word in a sentence
+      function findLongestWord(sentence) {
+        if (!sentence) return "";
+        const words = sentence.split(/\s+/);
+        let longestWord = "";
+        for (const word of words) {
+          if (word.length > longestWord.length) {
+            longestWord = word;
+          }
+        }
+        return longestWord;
+      }
+      function handleFindLongestWord() {
+        const sentence = document.getElementById("sentenceInput").value;
+        const longestWord = findLongestWord(sentence);
+        document.getElementById("longestWordResult").textContent =
+          "Longest word: " + longestWord;
+      }
+      //Create a chainable function
+      console.log("4.Chainable function");
+      function chain(value) {
+        return {
+          currentValue: value,
+          add: function (num) {
+            this.currentValue += num;
+            return this;
+          },
+          subtract: function (num) {
+            this.currentValue -= num;
+            return this;
+          },
+          result: function () {
+            return this.currentValue;
+          },
+        };
+      }
+      const output = chain(5).add(2).subtract(1).result();
+      console.log("Output:", output);
+    </script>
+  </body>
+</html>

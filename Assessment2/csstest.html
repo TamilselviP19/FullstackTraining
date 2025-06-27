@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Units: em, rem, px, % Example</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+
+      .container {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      /* px example */
+      .px-box {
+        width: 200px;
+        height: 100px;
+        background-color: #f8b400;
+        font-size: 16px;
+        margin-bottom: 1rem;
+      }
+
+      /* em example */
+      .em-box {
+        width: 12em;
+        height: 6em;
+        background-color: #007bff;
+        font-size: 16px;
+        margin-bottom: 1rem;
+      }
+
+      /* rem example */
+      .rem-box {
+        width: 12rem;
+        height: 6rem;
+        background-color: #28a745;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      /* % example */
+      .percent-container {
+        width: 400px;
+        border: 1px solid #666;
+        padding: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .percent-box {
+        width: 50%;
+        height: 50px;
+        background-color: #dc3545;
+        line-height: 50px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Units: em, rem, px, and %</h1>
+
+    <section class="container">
+      <h2>px</h2>
+      <div class="px-box"></div>
+    </section>
+
+    <section class="container">
+      <h2>em</h2>
+      <div class="em-box"></div>
+    </section>
+
+    <section class="container">
+      <h2>rem</h2>
+      <div class="rem-box"></div>
+    </section>
+
+    <section class="container">
+      <h2>Percentage</h2>
+      <div class="percent-container">
+        <div class="percent-box"></div>
+      </div>
+    </section>
+  </body>
+</html>
