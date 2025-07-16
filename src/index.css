@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.head{
+  background-color: rgb(231, 214, 193);
+  color: rgb(172, 8, 120);
+  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.btn{
+  background-color: bisque;
+
+}
