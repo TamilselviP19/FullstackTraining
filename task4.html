@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Demo
+        </title></head>
+        <!-- <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                display: flex;
+                gap: 5rem;
+                border: 2px double black;
+                width: 80%;
+                height: 100vh;
+                margin: 100px 100px;
+                justify-content:space-between;
+                align-items: center;
+                /* flex-direction: column-reverse; */
+                flex-wrap: wrap;
+            }
+            .box{
+                border: 2px outset rgb(11, 9, 9);
+                background-color: rgb(226, 32, 32);
+                color: white;
+                width: 5rem;
+                height:5rem ;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box 1">
+                <p>1</p>
+            </div>
+            <div class="box 2">
+                <p>2</p>
+            </div>
+            <div class="box 3">
+                <p>3</p>
+            </div>
+            <div class="box 4">
+                <p>4</p>
+            </div>
+        </div>
+    </body> -->
+     <style>
+        .container1{
+               
+                border: 2px double black;
+                width: 100vw;
+                height: 100vh;
+                margin: 100px 100px;
+                background-color: antiquewhite;
+                position: relative;
+             
+        }
+        .container2{
+                
+                border: 2px dotted black;
+                width: 70vw;
+                height: 70vh;
+                margin: 80px 80px;
+                background-color: rgb(241, 153, 123);
+                justify-content: center;
+                align-items: center;
+               
+        }
+        .container3{
+                
+                border: 2px double black;
+                width: 50vw;
+                height: 50vh;
+                margin: 60px 60px;
+                background-color: rgb(250, 194, 231);
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+                /* position: relative; */
+                
+        }
+       
+        .box{
+                 border: 2px outset rgb(11, 9, 9);
+                background-color: rgb(226, 32, 32);
+                color: white;
+                width: 3rem;
+                height:3rem ;
+                gap: 2rem;
+                display: flex;
+        }
+        .one{
+            position:fixed;
+            margin: 0;
+            top: 0;
+            
+           
+        }
+        .two{
+            position:absolute;
+           margin: 0;
+           top: 0;
+           left: 0;
+        }
+        .three{
+            position:absolute; 
+            left:-50px;
+            top: -56px;
+           
+        } 
+        .four{
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        
+         body{
+            width: 100vh;
+            height: 300vh;
+         }   
+        
+       
+    </style>
+    <body>
+        <div class="container1">
+                <div class="box one">
+                        <p>Box1</p>
+                    </div>
+
+            <div class="container2">
+                 <div class="box two">
+                        <p>Box2</p>
+                    </div>
+                <div class="container3" >   
+                    <div class="box three">
+                        <p>Box3</p>
+                    </div>  
+                    <div class="box four">
+                        <p>Box4</p>
+                    </div>
+                   
+                </div>  
+            </div>
+        </div> 
+      
+        
+    </body>
+</html>
