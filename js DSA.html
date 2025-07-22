@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //reverse a string
+      console.log("1.reverse string");
+      let str = "Hello";
+      let rev = str.split("").reverse().join("");
+      console.log(rev);
+      //palindrome
+      console.log("2.palimdrome");
+      let str1 = "madam";
+      let rev1 = str1.split("").reverse().join("");
+      console.log(rev1);
+      if (str1 == rev1) {
+        console.log("palindrome");
+      } else {
+        console.log("not palindrome");
+      }
+      //Largest number in a array
+      console.log("3.largest number");
+      let arr = [10, 95, 66, 83, 90];
+      large = 0;
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i] > large) {
+          large = arr[i];
+        }
+      }
+      console.log("Large num:" + large);
+      //No of vowels
+      console.log("4.no of vowels");
+      let str2 = "BhArathIi";
+      str2 = str2.toLowerCase();
+      let count = 0;
+      for (i = 0; i < str2.length; i++) {
+        if (
+          str2[i] == "a" ||
+          str2[i] == "e" ||
+          str2[i] == "i" ||
+          str2[i] == "o" ||
+          str2[i] == "u"
+        ) {
+          count++;
+        }
+      }
+      console.log(count);
+      //Factorial
+      console.log("5.factorial");
+      let num = 5;
+      fact = 1;
+      for (i = 1; i <= num; i++) {
+        fact = fact * i;
+      }
+      console.log("Factorial:" + fact);
+      //Sum of array elements
+      console.log("6.sum of array");
+      let arr1 = [10, 20, 30, 40, 50];
+      let res = arr1.reduce((a, b) => a + b);
+      console.log("sum:" + res);
+      //Fibonacci series
+      console.log("7.fibonacci");
+      let num1 = 10;
+      let fib = [0, 1];
+      for (i = 2; i <= num1; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+      }
+      console.log(fib);
+
+      //prime number
+      console.log("8.prime number");
+      function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      let number = 7;
+      isPrime(number)
+        ? console.log(number + " is a prime number")
+        : console.log(number + " is not a prime number");
+
+      //Remove duplicates from array
+      console.log("9.remove duplicates");
+      let arr2 = [1, 2, 2, 3, 4, 5, 6, 5];
+      let unique = [...new Set(arr2)];
+      console.log(unique);
+
+      //1st non repeating character in array
+      console.log("10.1st non repeating character");
+      let str3 = "swisiswb";
+
+      let firstUniqueChar = str3
+        .split("")
+        .find((char) => str3.indexOf(char) === str3.lastIndexOf(char));
+
+      console.log(firstUniqueChar);
+    </script>
+  </body>
+</html>

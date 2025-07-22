@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>Enter your age</p>
+   
+   <input type="number" id="age">
+   <button onclick="agecheck()">check</button> 
+   <hr><br>
+   <button onclick="printnumber()">print</button>
+   <hr><br>
+   <p class="bharathi">bharathi</p>
+   <p class="bharathi">bharathi1</p>
+   <button onclick="changeContent()">change</button>
+   <hr><br>
+   <p id="content">hello</p>
+   <p id="result"></p>
+   <p id="result1"></p>
+   <button onclick="alertdemo()">Alert</button>
+   <button onclick="confirmdemo()">confirm</button>
+   <button onclick="promptdemo()">prompt</button>
+   <hr><br>
+   <button onclick="playGame()">Game</button>
+   
+   <script>
+    function agecheck(){
+    let age=document.getElementById("age").value
+    if(age<=18)
+   {
+    alert("minor")
+   }
+   else{
+    alert("adult")
+   }
+    }
+   function printnumber(){
+    for( i=1;i<10;i++){
+        console.log(i);
+    }
+   }
+   function changeContent() {
+        let paragraphs = document.getElementsByClassName("bharathi");
+        for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].textContent = "bharathiAjay";
+        }
+    }
+    function alertdemo(){
+        let element=document.getElementById("content").textContent;
+        element+="Swarna !"
+        alert(element)
+    }
+    function confirmdemo(){
+         let element1=confirm("Do you like coding?");
+        if(element1==true){
+           document.getElementById("result").textContent="Great" 
+        }
+        else{
+             document.getElementById("result").textContent="Not Great" 
+        }
+    }
+    function promptdemo(){
+        let element2=prompt("Enter your name");
+        if (element2){
+           alert(document.getElementById("result1").textContent="Welcome "+element2)
+    }
+    else{
+        alert(document.getElementById("result1").textContent="Invalid")
+    }
+       
+}
+    function playGame(){
+    const choices = ["ROCK", "PAPER", "SCISSORS"];
+    let playAgain = true;
+    while (playAgain) {
+    let userChoice = prompt("Choose ROCK, PAPER, or SCISSORS").toUpperCase();
+    if (!choices.includes(userChoice)) {
+    alert("Invalid choice! Please choose only ROCK, PAPER, or SCISSORS.");
+    continue; 
+    }
+
+  let computerChoice = choices[Math.floor(Math.random() * 3)];
+  alert("You chose: " + userChoice + "\nComputer chose: " + computerChoice);
+
+  if (userChoice === computerChoice) {
+    alert("It's a tie!");
+  } 
+  else if (
+    (userChoice === "ROCK" && computerChoice === "SCISSORS") ||
+    (userChoice === "PAPER" && computerChoice === "ROCK") ||
+    (userChoice === "SCISSORS" && computerChoice === "PAPER")
+  ) {
+    alert("You win! ");
+  } else {
+    alert("Computer wins!");
+  }
+
+  playAgain = confirm("Do you want to play again?");
+}
+
+alert("Thanks for playing!");
+    }
+    
+   </script>
+</body>
+</html>
